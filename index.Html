@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Call Quality Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📞 Real-Time Call Quality Analyzer</h1>
+
+  <!-- Login box -->
+  <div id="login">
+    <input type="text" id="role" placeholder="Enter Role (Admin/Engineer/Analyst)">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <!-- Dashboard (hidden at first) -->
+  <div id="dashboard" style="display:none;">
+    <h2 id="welcome"></h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Call ID</th>
+          <th>Latency (ms)</th>
+          <th>Jitter (ms)</th>
+          <th>Packet Loss (%)</th>
+          <th>QoS Score</th>
+        </tr>
+      </thead>
+      <tbody id="callData"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
